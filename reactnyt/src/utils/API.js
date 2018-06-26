@@ -8,8 +8,6 @@
 //     console.log(body);
 //   })
 
-
-
   import axios from "axios";
 
   export default {

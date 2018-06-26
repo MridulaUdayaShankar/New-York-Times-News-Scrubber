@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import DeleteBtn from "../../components/DeleteBtn";
-import API from "../../utils/API";
-import { Link } from "react-router-dom";
-import { Col, Row, Container } from "../../components/Grid";
-import { Input, FormBtn } from "../../components/Form";
+// import DeleteBtn from "../../components/DeleteBtn";
+import API from "../../utils/API.js";
+// import { Link } from "react-router-dom";
+// import { Col, Row, Container } from "../../components/Grid";
+// import { Input, FormBtn } from "../../components/Form";
 
 class Home extends Component {
     state = {
@@ -18,17 +18,22 @@ class Home extends Component {
     }
 
     searchArticles = () => {
-        API.search()
-            .then(res =>
-                this.setState({ articles: res.data})
-            )
+        API.getArticles()
+            .then(res => {
+                this.setState({ articles: res.data })
+                console.log(this.state.articles)
+            })
             .catch(err => console.log(err));
     };
 
-
-    search = () => {
-        
+    render() {
+        return (
+            <div>
+              <p>  hello</p>
+            </div>
+        );
     }
 
+}
 
-}     
+export default Home;    
