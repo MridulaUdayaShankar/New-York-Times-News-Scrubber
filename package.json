@@ -1,0 +1,26 @@
+{
+  "name": "New-York-Times-News-Scrubber",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MridulaUdayaShankar/New-York-Times-News-Scrubber.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MridulaUdayaShankar/New-York-Times-News-Scrubber/issues"
+  },
+  "homepage": "https://github.com/MridulaUdayaShankar/New-York-Times-News-Scrubber#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "mongoose": "^5.1.6",
+    "request": "^2.87.0"
+  }
+}
