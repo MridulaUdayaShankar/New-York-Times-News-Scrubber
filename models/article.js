@@ -17,6 +17,7 @@ var ArticleSchema = new Schema({
     type: String,
     required: true
   },
+  // 'date' is required and of type Date
   date: {
 	type: Date,
 	required: true
