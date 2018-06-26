@@ -2,9 +2,11 @@
   "name": "New-York-Times-News-Scrubber",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently \"nodemon server.js\" \"npm run client\"",
+    "client": "node scripts/start-client.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +19,10 @@
     "url": "https://github.com/MridulaUdayaShankar/New-York-Times-News-Scrubber/issues"
   },
   "homepage": "https://github.com/MridulaUdayaShankar/New-York-Times-News-Scrubber#readme",
+  "devDependencies": {
+    "concurrently": "^3.5.0",
+    "nodemon": "^1.11.0"
+  },
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
@@ -24,3 +30,5 @@
     "request": "^2.87.0"
   }
 }
+
+
