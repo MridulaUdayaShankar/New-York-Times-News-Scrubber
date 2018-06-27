@@ -54,6 +54,20 @@ class Home extends Component {
         }
     };
 
+
+
+// ===================Gustavo&Lena===================
+
+
+
+
+
+
+// ==================================================
+
+
+
+
     render() {
         return (
             <Container>
@@ -111,4 +125,4 @@ class Home extends Component {
 
 }
 
-export default Home;    
+export default Home;
