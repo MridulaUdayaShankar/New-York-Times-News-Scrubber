@@ -1,10 +1,11 @@
 import React from "react";
+import "./Navbar.css";
 
-const Nav = () => (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-light">
-        <a className="navbar-brand" href="/">
-            New York Times
+const Navbar = () => (
+    <nav className="navbar navbar-expand-lg" style= {{ "background-color": "rgb(140, 175, 140)" }}>
+        <a className="navbar-brand mb-0 h1" href="/">
+            Saved Articles
         </a>
     </nav>
 );
-export default Nav;
+export default Navbar;
