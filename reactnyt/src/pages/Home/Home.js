@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import {FormBtn as SaveBtn} from "../../components/Form";
+import { FormBtn as SaveBtn } from "../../components/Form";
 import API from "../../utils/API.js";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
@@ -53,10 +53,8 @@ class Home extends Component {
         }
     };
 
-
     render() {
         return (
-
             <Container>
                 <h1>Search Form</h1>
                 <Row>
@@ -94,10 +92,10 @@ class Home extends Component {
                         {this.state.articles.length ? (
                             <Card>
                                 {this.state.articles.map(article => (
-                                     <CardBody key={article._id}>
+                                    <CardBody key={article._id}>
                                         <Link to={"/articles/" + article._id}>{article.headline.main}
                                         </Link>
-                                        <SaveBtn onClick={() => this.saveArticle(article._id)} children='Save'/>
+                                        <SaveBtn onClick={() => this.saveArticle(article._id)} children='Save' />
                                     </CardBody>
                                 ))}
 
