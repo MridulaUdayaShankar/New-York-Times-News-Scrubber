@@ -3,6 +3,7 @@ nav{
     background-image: url('https://g1.nyt.com/assets/homepage/20180614-182902/images/foundation/logos/nyt-logo-379x64.png');
     background-repeat: no-repeat;  
     background-position-x: center;
-    border-bottom: black solid 5px;
+    border-bottom: rgba(255, 255, 255, 0.6) solid 3px;
     margin-bottom: 20px;
+    padding: 30px;
 }
