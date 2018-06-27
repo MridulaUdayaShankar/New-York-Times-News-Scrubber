@@ -1,5 +1,5 @@
 const db = require("../models");
-
+const request = require("request")
 // Defining methods for the articlescontroller
 module.exports = {
 
@@ -8,11 +8,15 @@ module.exports = {
         request.get({
             url: "https://api.nytimes.com/svc/search/v2/articlesearch.json",
             qs: {
+                q: req.body.topic,
+                'start_date': req.body.startDate,
+
               'api-key': "e36ab4b6d37340628bcf1cff5838b879"
             },
           }, function(err, response, body) {
             body = JSON.parse(body);
-            console.log(body);
+            console.log(body.response.docs);
+            res.json(body.response.docs)
           });
           
     },
