@@ -36,9 +36,10 @@ class Home extends Component {
         link: lin
         // ^Thats not a typo, LEAVE IT.
       }
-      API.saveArticle(obj).then(res => {
-          console.log(res);
-      })
+      console.log(obj)
+      API.saveArticle(obj)
+        .then(res => console.log(res))
+        .catch(err => console.log(err));
     };
 
 
@@ -119,7 +120,7 @@ class Home extends Component {
                                     <CardBody key={article._id}>
                                         <Link to={"/articles/" + article._id}>{article.headline.main}
                                         </Link>
-                                        <SaveBtn onClick={this.saveArticle(article.headline.main, article.web_url)} children='Save' />
+                                        <SaveBtn onClick={ () => this.saveArticle(article.headline.main, article.web_url)} children='Save' />
                                     </CardBody>
                                 ))}
 
