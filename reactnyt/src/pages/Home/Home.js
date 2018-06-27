@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
 import { Input, FormBtn } from "../../components/Form";
 import { Card, CardBody } from "../../components/Card";
+import "./Home.css";
 
 class Home extends Component {
     state = {
@@ -56,39 +57,38 @@ class Home extends Component {
     render() {
         return (
             <Container>
-                <h1>Search Form</h1>
                 <Row>
                     <Col size="md-6">
-
+                        <h3>Search Form</h3>
                         <form>
                             <Input
                                 value={this.state.topic}
                                 onChange={this.handleInputChange}
                                 name="topic"
-                                placeholder="topic (required)"
+                                placeholder="topic"
                             />
                             <Input
                                 value={this.state.start_date}
                                 onChange={this.handleInputChange}
                                 name="start_date"
-                                placeholder="start_date (required)"
+                                placeholder="start_date"
                             />
                             <Input
                                 value={this.state.end_date}
                                 onChange={this.handleInputChange}
                                 name="end_date"
-                                placeholder="end_date (required)"
+                                placeholder="end_date"
                             />
                             <FormBtn
                                 disabled={!(this.state.start_date && this.state.end_date && this.state.topic)}
                                 onClick={this.handleFormSubmit}
+                                children = 'Search'
                             >
-                                Search
                             </FormBtn>
                         </form>
                     </Col>
                     <Col size="md-6 sm-12">
-                        <h1>Results</h1>
+                        <h3>Results</h3>
                         {this.state.articles.length ? (
                             <Card>
                                 {this.state.articles.map(article => (
