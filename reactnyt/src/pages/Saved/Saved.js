@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
 import { Card, CardBody } from "../../components/Card";
 import "./Saved.css";
-
 class Saved extends Component {
     state = {
         articles: [],
