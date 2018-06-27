@@ -5,6 +5,7 @@ import Home from "./pages/Home/Home.js";
 import Saved from "./pages/Saved";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import "./App.css";
 const App = () => (
   <Router>
     <div>
@@ -14,7 +15,6 @@ const App = () => (
         <Route exact path="/home" component={Home} />
         <Route exact path="/saved/:id" component={Saved} />
       </Switch>
-  
       <Footer />
     </div>
   </Router>
