@@ -95,10 +95,9 @@ class Home extends Component {
                             <Card>
                                 {this.state.articles.map(article => (
                                      <CardBody key={article._id}>
-                                        <Link to={"/articles/" + article._id}>
-
+                                        <Link to={"/articles/" + article._id}>{article.headline.main}
                                         </Link>
-                                        <SaveBtn onClick={() => this.saveArticle(article._id)} />
+                                        <SaveBtn onClick={() => this.saveArticle(article._id)} children='Save'/>
                                     </CardBody>
                                 ))}
 
