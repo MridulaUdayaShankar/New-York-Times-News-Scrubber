@@ -96,12 +96,14 @@ class Home extends Component {
                                 value={this.state.start_date}
                                 onChange={this.handleInputChange}
                                 name="start_date"
+                                type="date"
                                 placeholder="start_date"
                             />
                             <Input
                                 value={this.state.end_date}
                                 onChange={this.handleInputChange}
                                 name="end_date"
+                                type="date"
                                 placeholder="end_date"
                             />
                             <FormBtn
